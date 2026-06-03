@@ -7,22 +7,38 @@ Target: Video semantic segmentation with 4-level semantic hierarchy: Pixel → O
 
 ## Key features  
 - 4 semantic levels: Pixel → Object → Room → Scene 
-- Video Temporal Modeling: Specialized Mechanisms for Temporal Feature Extraction and Fusion  
+- Video Temporal Modeling: Specialized Mechanisms for Temporal Feature Extraction and Fusion with scene boundary detection and adaptive state resetting.
 - Cross-level Interaction: Bidirectional state transfer and attention mechanisms between levels
 - Progressive Training: A multi-stage training strategy that progressively optimizes model performance
 - AI2Thor Integration: Complete indoor Scene dataset support  
 
-## Innovation module  
-- 4 semantic levels: Pixel → Object → Room → Scene 
-- Video Temporal Modeling: Specialized Mechanisms for Temporal Feature Extraction and Fusion  
-- Cross-level Interaction: Bidirectional state transfer and attention mechanisms between levels
-- Progressive Training: A multi-stage training strategy that progressively optimizes model performance
-- AI2Thor Integration: Complete indoor Scene dataset support  
+## Requirements  
+- Python >= 3.7 
+- PyTorch == 1.7.0+cu110  
+- CUDA >= 11.0
+- MMSegmentation
+- MMCV >= 1.1.4, <= 1.3.0  
 
-## Innovation module  
-1. 克隆仓库：`git clone 你的仓库地址`  
-2. 安装依赖：`pip install -r requirements.txt`  
-3. 运行项目：`python main.py`  
+## Install Dependencies  
+pip install -r requirements
 
-## 贡献指南  
-欢迎提交Issue或Pull Request！  
+## Data Preparation  
+python ai2thor/ai2thor_dataseg.py
+
+## Training  
+python train.py --config configs/your_config.py --work-dir work_dirs/experiment_name
+
+## Distributed Training  
+python -m torch.distributed.launch --nproc_per_node=4 train.py --config configs/your_config.py --launcher pytorch
+
+## Dataset Format  
+data/
+└── ai2thor/
+    ├── images/                      
+    ├── annotations/                 
+    ├── hierarchical_labels/         
+    │   ├── pixel/
+    │   ├── object/
+    │   ├── room/
+    │   └── scene/
+    └── video_sequences/             
