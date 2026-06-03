@@ -1,9 +1,8 @@
 # DHSF Project Summary  
 This is an Enhanced Video Semantic Segmentation project based on SegFormer, designed for hierarchical video semantic segmentation with AI2Thor dataset integration.
 ## Core Architecture  
-  Base Model: SegFormer (transformer-based semantic segmentation)
-Target: Video semantic segmentation with 4-level semantic hierarchy:
-Pixel → Object → Room → Scene
+Base Model: SegFormer (transformer-based semantic segmentation)
+Target: Video semantic segmentation with 4-level semantic hierarchy: Pixel → Object → Room → Scene
 
 ## 功能特点  
 - 功能1：...  
