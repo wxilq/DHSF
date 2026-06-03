@@ -31,14 +31,15 @@ python train.py --config configs/your_config.py --work-dir work_dirs/experiment_
 ## Distributed Training  
 python -m torch.distributed.launch --nproc_per_node=4 train.py --config configs/your_config.py --launcher pytorch
 
-## Dataset Format  
-data/
-└── ai2thor/
-├── images/
-├── annotations/
-├── hierarchical_labels/
-│ ├── pixel/
-│ ├── object/
-│ ├── room/
-│ └── scene/
-└── video_sequences/           
+## Dataset Format
+
+- `data/`
+  - `ai2thor/`
+    - `images/`
+    - `annotations/`
+    - `hierarchical_labels/`
+      - `pixel/`
+      - `object/`
+      - `room/`
+      - `scene/`
+    - `video_sequences/`      
