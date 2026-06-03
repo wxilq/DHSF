@@ -1,5 +1,5 @@
-# DHSF project  
-
+# DHSF Project Summary  
+This is an Enhanced Video Semantic Segmentation project based on SegFormer, designed for hierarchical video semantic segmentation with AI2Thor dataset integration.
 ## 项目简介  
 这是一个用于...的项目（简单描述项目用途）。  
 
