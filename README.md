@@ -34,11 +34,11 @@ python -m torch.distributed.launch --nproc_per_node=4 train.py --config configs/
 ## Dataset Format  
 data/
 └── ai2thor/
-    ├── images/                      
-    ├── annotations/                 
-    ├── hierarchical_labels/         
-    │   ├── pixel/
-    │   ├── object/
-    │   ├── room/
-    │   └── scene/
-    └── video_sequences/             
+├── images/
+├── annotations/
+├── hierarchical_labels/
+│ ├── pixel/
+│ ├── object/
+│ ├── room/
+│ └── scene/
+└── video_sequences/           
